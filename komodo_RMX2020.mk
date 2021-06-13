@@ -21,15 +21,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/realme/RMX2020/device.mk)
 
-# Inherit some common NusantaraROM stuff.
-$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
+# Inherit some common KomodoROM stuff.
+$(call inherit-product, vendor/komodo/config/common_full_phone.mk)
 
-# NusantaraProject stuff
-NAD_BUILD_TYPE := OFFICIAL
+# KomodoOS stuff OFFICIAL TAG
+KOMODO_OFFICIAL := true
+KOMODO_VARIANT := RELEASE
+KOMODO_BUILD_TYPE= gapps
+
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := nad_RMX2020
+PRODUCT_NAME := komodo_RMX2020
 PRODUCT_DEVICE := RMX2020
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme G70 Series
